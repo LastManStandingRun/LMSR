@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Last Man Standing Run 2027 – Düsseldorf</title>
+<meta name="description" content="Backyard Ultra in Düsseldorf: 6-km-Loop, jede volle Stunde, 60 Minuten Zeit. 11.09.2027. Wer bleibt als Letzte:r übrig?">
+<meta property="og:title" content="Last Man Standing Run 2027">
+<meta property="og:description" content="Eine Runde. Jede volle Stunde. Bis nur noch eine Person übrig ist. 11.09.2027, Düsseldorf.">
+<meta property="og:image" content="camp-grafik.jpg">
+<meta name="theme-color" content="#0c0e08">
+<style>
+:root{--creme:#0c0e08;--paper:rgba(14,17,9,.84);--ink:#ECE6D3;--olive:#9BB04A;--olive-d:#6E8030;--line:#343d1d;--muted:#ADAB93;--bd:#4E5B2A;--display:"Bahnschrift","Arial Narrow","Roboto Condensed",Impact,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;min-width:0}html{scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;background:var(--creme);color:var(--ink);font:17px/1.6 var(--body);overflow-x:hidden;max-width:100vw}
+img,svg{max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--olive);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+@media(max-width:380px){.wrap{padding:0 16px}}
+header.nav{position:sticky;top:0;z-index:5;background:var(--creme);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:16px}
+.brand{font:800 20px/1 var(--display);text-decoration:none;letter-spacing:.02em}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+.nav ul a{text-decoration:none;font-size:15px}.nav ul a:hover{text-decoration:underline}
+.btn{display:inline-block;background:var(--ink);color:var(--creme);padding:13px 24px;font:700 17px/1 var(--display);letter-spacing:.03em;text-decoration:none;border:2px solid var(--bd);border-radius:2px}
+.btn:hover{background:var(--olive-d);border-color:var(--olive-d)}
+.btn.ghost{background:transparent;color:var(--ink)}.btn.ghost:hover{background:var(--ink);color:var(--creme)}
+.btn[aria-disabled=true]{background:transparent;color:var(--muted);border-color:var(--muted);border-style:dashed;pointer-events:none}
+.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.hero h1{font:900 clamp(42px,12vw,150px)/.9 var(--display);margin:0 0 22px;text-transform:uppercase;letter-spacing:-.01em;word-break:break-word}
+.hero p.lead{font-size:clamp(19px,2.4vw,24px);max-width:34em;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cd{margin-top:34px;display:flex;flex-wrap:wrap;gap:0;border:2px solid var(--bd);width:max-content;max-width:100%;background:var(--paper)}
+.cd div{padding:12px 20px;text-align:center;border-right:2px solid var(--bd);min-width:86px}.cd div:last-child{border:0}
+.cd b{display:block;font:800 40px/1 var(--display);font-variant-numeric:tabular-nums}
+.cd span{font-size:13px;color:var(--muted)}
+.cdlabel{margin:34px 0 8px;font-size:15px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--olive);color:var(--creme)}
+.stats div{padding:26px 22px;border-right:1px solid rgba(241,234,219,.3)}.stats div:last-child{border:0}
+.stats b{display:block;font:800 clamp(34px,5vw,54px)/1 var(--display)}.stats span{font-size:15px;opacity:.9}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+h2{font:900 clamp(36px,6vw,64px)/.95 var(--display);text-transform:uppercase;margin:0 0 20px}
+h3{font:800 24px/1.1 var(--display);margin:0 0 8px}
+.intro{max-width:36em;margin:0 0 36px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:2px solid var(--bd);background:var(--paper)}
+.steps>div{padding:24px 20px;border-right:2px solid var(--bd)}.steps>div:last-child{border:0}
+.steps p{margin:0}.steps .n{font:900 44px/1 var(--display);color:var(--olive);margin-bottom:10px}
+.rule{margin:36px 0 0;padding:22px 26px;border-left:8px solid var(--olive);background:var(--paper);font-size:19px}
+.grid2{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center}
+.map{background:var(--paper);border:2px solid var(--bd);padding:10px}
+.map svg{display:block;width:100%;height:auto}
+.route{fill:none;stroke:var(--olive);stroke-width:5;stroke-linejoin:round;stroke-linecap:round}
+.route-b{fill:none;stroke:var(--ink);stroke-width:9;stroke-linejoin:round;stroke-linecap:round;opacity:.9}
+.dl{margin-top:22px}.small{font-size:14px;color:var(--muted);margin:14px 0 0}
+.camp img{display:block;width:100%;height:auto;border:2px solid var(--bd)}
+.camp figcaption{font-size:14px;color:var(--muted);margin-top:10px}
+.camp{margin:0}
+dl.facts{margin:0;border:2px solid var(--bd);background:var(--paper)}
+dl.facts div{display:grid;grid-template-columns:170px 1fr;border-bottom:1px solid var(--line)}dl.facts div:last-child{border:0}
+dl.facts dt{padding:18px 22px;font:800 20px/1.3 var(--display);background:var(--creme);border-right:1px solid var(--line)}
+dl.facts dd{margin:0;padding:18px 22px;font-size:19px}
+footer{padding:44px 0;font-size:15px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between}
+footer a{text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:820px){.nav ul{display:none}.stats,.steps{grid-template-columns:1fr 1fr}.steps>div:nth-child(2){border-right:0}.steps>div:nth-child(-n+2){border-bottom:2px solid var(--bd)}
+.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid rgba(241,234,219,.3)}
+.grid2{grid-template-columns:1fr}section{padding:52px 0}dl.facts div{grid-template-columns:1fr}dl.facts dt{border-right:0;padding-bottom:4px}dl.facts dd{padding-top:6px}}
+@media(max-width:480px){.cd div{min-width:60px;padding:8px 10px}.cd b{font-size:26px}}
+@media(max-width:380px){.duo{gap:8px}.duo figcaption{font-size:14px;margin-top:8px}.gal{column-gap:8px}.gal img{margin-bottom:8px}.steps>div{padding:16px 12px}.steps .n{font-size:34px}dl.facts dt{font-size:17px;padding:14px 16px}dl.facts dd{padding:14px 16px;font-size:16px}}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px}.duo figure,.orga figure{margin:0}
+.duo img,.orga img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border:2px solid var(--bd)}
+.duo img{object-position:50% 30%}.orga img{object-position:50% 40%}
+.duo figcaption{margin-top:12px;font:800 26px/1.1 var(--display);text-transform:uppercase}
+.sub{margin:56px 0 4px}
+.gal{columns:3;column-gap:12px;margin-top:16px}.gal img{display:block;width:100%;height:auto;margin:0 0 12px;break-inside:avoid;border:2px solid var(--bd)}
+.orga{grid-template-columns:.8fr 1fr}
+@media(max-width:820px){.gal{columns:2}.orga{grid-template-columns:1fr}.orga figure{max-width:420px}}
+@media(max-width:480px){.duo{gap:12px}.duo figcaption{font-size:17px}}
+.bg{position:fixed;inset:-6%;z-index:-1;background:#0c0e08 url(images/hintergrund.jpg) 50% 55%/cover no-repeat;will-change:transform,opacity}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,14,8,.1),rgba(12,14,8,.7))}
+header.nav{background:rgba(12,14,8,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.brand,h1,h2,.sub,dl.facts dt,.cd b,.stats b{color:var(--olive)}
+h1{text-shadow:0 2px 28px rgba(0,0,0,.7)}
+.btn{background:var(--olive);color:#0c0e08;border-color:var(--olive)}.btn:hover{background:#B8CC66;border-color:#B8CC66}
+.btn.ghost{background:transparent;color:var(--olive)}.btn.ghost:hover{background:var(--olive);color:#0c0e08}
+.btn[aria-disabled=true]{background:transparent;color:var(--muted);border-color:var(--muted)}
+.stats{background:var(--paper);color:var(--ink);border-top:1px solid var(--line)}
+.route-b{stroke:#0c0e08}.map text{fill:#ECE6D3}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<header class="nav"><div class="wrap">
+<a class="brand" href="#top">LAST MAN STANDING RUN</a>
+<nav aria-label="Hauptnavigation"><ul><li><a href="#format">Format</a></li><li><a href="#strecke">Strecke</a></li><li><a href="#basecamp">Base Camp</a></li><li><a href="#rueckblick">Rückblick</a></li><li><a href="#infos">Infos</a></li></ul></nav>
+<a class="btn ticket" href="#infos" aria-disabled="true">Ticket folgt</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<h1>Last Man<br>Standing Run</h1>
+<p class="lead">Eine Runde. Jede volle Stunde. Immer wieder, bis nur noch eine Person übrig ist. Düsseldorf, 11. September 2027.</p>
+<div class="cta"><a class="btn ticket" href="#infos" aria-disabled="true">Ticket-Link folgt</a><a class="btn ghost" href="#format">So funktioniert's</a></div>
+<p class="cdlabel">Noch bis zum Start:</p>
+<div class="cd" id="cd" role="timer" aria-live="off"><div><b id="d">--</b><span>Tage</span></div><div><b id="h">--</b><span>Std.</span></div><div><b id="m">--</b><span>Min.</span></div><div><b id="s">--</b><span>Sek.</span></div></div>
+</div></div>
+
+<div class="stats" role="list"><div role="listitem"><b>6 km</b><span>pro Runde</span></div><div role="listitem"><b>60 min</b><span>Zeit pro Runde</span></div><div role="listitem"><b>Jede Stunde</b><span>neuer Start</span></div><div role="listitem"><b>1</b><span>Last Man Standing</span></div></div>
+
+<section id="format"><div class="wrap">
+<h2>Das Format</h2>
+<p class="intro">Ein Backyard Ultra hat kein festes Ziel. Du läufst, bis du nicht mehr kannst oder alle anderen aufgegeben haben.</p>
+<div class="steps">
+<div><div class="n">1</div><h3>6-km-Loop</h3><p>Immer dieselbe Runde, immer wieder.</p></div>
+<div><div class="n">2</div><h3>Auf die Stunde</h3><p>Zu jeder vollen Stunde startet die nächste Runde.</p></div>
+<div><div class="n">3</div><h3>60 Minuten</h3><p>Die Zeit, die nach deiner Runde übrig bleibt, gehört dir zum Essen und Erholen.</p></div>
+<div><div class="n">4</div><h3>Bis einer bleibt</h3><p>Das Rennen endet, wenn nur noch eine Person übrig ist.</p></div>
+</div>
+<p class="rule"><strong>Schaffst du die Runde nicht in 60 Minuten, bist du draußen.</strong> Das Event läuft so lange, bis nur noch eine Person übrig bleibt: der oder die Last Man Standing 2027.</p>
+</div></section>
+
+<section id="strecke"><div class="wrap grid2">
+<div class="map"><svg viewBox="0 0 600 420" role="img" aria-label="Kartenübersicht des 6-km-Rundkurses"><path class="route-b" d="M247.4 98.5 L248.5 98.8 L248.1 97.2 L247.6 95.3 L248.3 91.1 L248.7 89.9 L250.0 88.4 L253.2 84.0 L257.0 76.1 L257.4 74.4 L257.3 70.0 L256.4 67.6 L254.2 63.6 L253.9 63.0 L251.4 59.3 L250.2 57.5 L248.0 54.1 L247.7 52.8 L248.7 51.6 L250.1 51.0 L251.5 50.6 L257.5 48.8 L261.6 47.6 L265.9 45.9 L273.3 42.6 L274.5 42.0 L276.1 41.1 L279.1 38.4 L283.0 35.0 L287.5 30.0 L288.7 30.6 L291.4 32.9 L293.5 33.1 L297.7 33.4 L302.3 33.5 L305.4 33.6 L305.3 36.2 L305.1 41.4 L305.8 41.4 L306.7 43.3 L316.5 43.8 L318.0 43.8 L319.9 45.5 L320.2 47.0 L321.1 48.9 L323.8 51.5 L327.4 57.7 L329.3 59.8 L330.4 60.5 L331.5 61.2 L333.0 62.1 L339.0 64.3 L339.6 65.3 L340.2 67.2 L340.4 67.8 L340.9 68.9 L339.6 69.4 L339.8 70.1 L335.9 71.6 L335.9 74.4 L336.1 83.5 L334.7 83.5 L334.8 91.1 L334.3 91.2 L332.9 91.2 L332.9 92.6 L333.0 102.5 L333.0 104.9 L332.6 104.9 L332.6 106.9 L332.1 107.6 L331.7 108.0 L330.8 109.2 L330.9 113.4 L331.0 114.5 L332.7 118.3 L333.7 120.5 L334.2 124.2 L333.0 130.4 L333.1 141.4 L327.7 140.2 L323.1 140.2 L313.7 141.6 L312.1 141.5 L309.1 141.4 L301.7 139.4 L294.0 134.9 L291.2 133.5 L284.0 131.5 L279.3 128.7 L276.2 125.6 L273.7 123.2 L272.1 123.8 L269.0 127.3 L264.6 138.5 L265.1 141.1 L265.2 142.3 L264.4 143.5 L263.5 145.8 L263.9 155.0 L265.2 157.9 L274.3 158.7 L279.5 159.0 L281.0 159.1 L285.9 158.8 L290.2 159.3 L300.6 163.9 L308.8 165.3 L314.2 167.2 L321.1 170.0 L328.9 172.2 L343.9 175.6 L348.6 176.6 L355.4 177.1 L367.1 177.9 L372.2 177.4 L375.6 177.0 L375.5 178.8 L375.1 206.6 L374.7 210.9 L372.7 214.6 L370.0 217.5 L368.1 218.3 L368.3 218.8 L368.6 219.2 L370.5 222.7 L371.1 223.7 L370.0 225.3 L368.0 224.8 L362.8 226.0 L341.7 229.1 L337.5 229.7 L329.7 232.6 L324.8 233.8 L317.9 234.1 L294.0 231.3 L289.1 231.7 L286.5 233.6 L285.2 235.6 L284.5 237.8 L282.4 251.7 L282.1 254.2 L277.5 282.7 L274.9 299.2 L274.4 302.8 L274.1 305.2 L271.7 316.7 L269.9 325.7 L268.8 330.9 L268.3 337.7 L261.7 365.9 L261.7 373.0 L262.5 378.8 L263.9 384.4 L264.8 388.2 L264.3 388.2 L255.0 390.0 L254.3 390.0 L253.7 382.3 L253.5 378.7 L253.0 370.6 L253.4 366.2 L258.9 337.8 L264.6 308.0 L266.9 296.2 L268.1 289.9 L270.2 277.7 L271.3 271.2 L270.7 268.9 L270.3 258.4 L270.1 254.3 L272.1 250.9 L273.8 239.9 L275.0 232.8 L253.7 227.5 L243.1 222.6 L242.2 221.8 L229.4 201.4 L228.1 199.0 L225.2 193.5 L224.4 191.0 L230.7 190.1 L232.2 190.4 L234.9 192.2 L236.3 191.8 L237.4 191.0 L241.4 186.5 L242.1 183.9 L242.3 179.1 L242.7 178.4 L243.9 176.5 L244.2 175.1 L244.9 174.3 L249.7 172.4 L251.7 169.9 L254.8 166.3 L257.9 164.1 L260.2 163.2 L261.3 160.4 L262.4 157.8 L263.9 155.0 L263.5 145.8 L264.4 143.5 L265.2 142.3 L265.1 141.1 L264.6 138.5 L269.0 127.3 L269.2 125.6 L269.5 123.0 L268.6 121.5 L268.3 119.5 L269.6 118.5 L269.2 118.0 L269.5 117.6 L270.0 117.2 L270.9 116.9 L269.3 112.9 L266.3 109.4 L261.5 106.2 L261.0 106.0 L254.1 104.1 L248.5 98.8"/><path class="route" d="M247.4 98.5 L248.5 98.8 L248.1 97.2 L247.6 95.3 L248.3 91.1 L248.7 89.9 L250.0 88.4 L253.2 84.0 L257.0 76.1 L257.4 74.4 L257.3 70.0 L256.4 67.6 L254.2 63.6 L253.9 63.0 L251.4 59.3 L250.2 57.5 L248.0 54.1 L247.7 52.8 L248.7 51.6 L250.1 51.0 L251.5 50.6 L257.5 48.8 L261.6 47.6 L265.9 45.9 L273.3 42.6 L274.5 42.0 L276.1 41.1 L279.1 38.4 L283.0 35.0 L287.5 30.0 L288.7 30.6 L291.4 32.9 L293.5 33.1 L297.7 33.4 L302.3 33.5 L305.4 33.6 L305.3 36.2 L305.1 41.4 L305.8 41.4 L306.7 43.3 L316.5 43.8 L318.0 43.8 L319.9 45.5 L320.2 47.0 L321.1 48.9 L323.8 51.5 L327.4 57.7 L329.3 59.8 L330.4 60.5 L331.5 61.2 L333.0 62.1 L339.0 64.3 L339.6 65.3 L340.2 67.2 L340.4 67.8 L340.9 68.9 L339.6 69.4 L339.8 70.1 L335.9 71.6 L335.9 74.4 L336.1 83.5 L334.7 83.5 L334.8 91.1 L334.3 91.2 L332.9 91.2 L332.9 92.6 L333.0 102.5 L333.0 104.9 L332.6 104.9 L332.6 106.9 L332.1 107.6 L331.7 108.0 L330.8 109.2 L330.9 113.4 L331.0 114.5 L332.7 118.3 L333.7 120.5 L334.2 124.2 L333.0 130.4 L333.1 141.4 L327.7 140.2 L323.1 140.2 L313.7 141.6 L312.1 141.5 L309.1 141.4 L301.7 139.4 L294.0 134.9 L291.2 133.5 L284.0 131.5 L279.3 128.7 L276.2 125.6 L273.7 123.2 L272.1 123.8 L269.0 127.3 L264.6 138.5 L265.1 141.1 L265.2 142.3 L264.4 143.5 L263.5 145.8 L263.9 155.0 L265.2 157.9 L274.3 158.7 L279.5 159.0 L281.0 159.1 L285.9 158.8 L290.2 159.3 L300.6 163.9 L308.8 165.3 L314.2 167.2 L321.1 170.0 L328.9 172.2 L343.9 175.6 L348.6 176.6 L355.4 177.1 L367.1 177.9 L372.2 177.4 L375.6 177.0 L375.5 178.8 L375.1 206.6 L374.7 210.9 L372.7 214.6 L370.0 217.5 L368.1 218.3 L368.3 218.8 L368.6 219.2 L370.5 222.7 L371.1 223.7 L370.0 225.3 L368.0 224.8 L362.8 226.0 L341.7 229.1 L337.5 229.7 L329.7 232.6 L324.8 233.8 L317.9 234.1 L294.0 231.3 L289.1 231.7 L286.5 233.6 L285.2 235.6 L284.5 237.8 L282.4 251.7 L282.1 254.2 L277.5 282.7 L274.9 299.2 L274.4 302.8 L274.1 305.2 L271.7 316.7 L269.9 325.7 L268.8 330.9 L268.3 337.7 L261.7 365.9 L261.7 373.0 L262.5 378.8 L263.9 384.4 L264.8 388.2 L264.3 388.2 L255.0 390.0 L254.3 390.0 L253.7 382.3 L253.5 378.7 L253.0 370.6 L253.4 366.2 L258.9 337.8 L264.6 308.0 L266.9 296.2 L268.1 289.9 L270.2 277.7 L271.3 271.2 L270.7 268.9 L270.3 258.4 L270.1 254.3 L272.1 250.9 L273.8 239.9 L275.0 232.8 L253.7 227.5 L243.1 222.6 L242.2 221.8 L229.4 201.4 L228.1 199.0 L225.2 193.5 L224.4 191.0 L230.7 190.1 L232.2 190.4 L234.9 192.2 L236.3 191.8 L237.4 191.0 L241.4 186.5 L242.1 183.9 L242.3 179.1 L242.7 178.4 L243.9 176.5 L244.2 175.1 L244.9 174.3 L249.7 172.4 L251.7 169.9 L254.8 166.3 L257.9 164.1 L260.2 163.2 L261.3 160.4 L262.4 157.8 L263.9 155.0 L263.5 145.8 L264.4 143.5 L265.2 142.3 L265.1 141.1 L264.6 138.5 L269.0 127.3 L269.2 125.6 L269.5 123.0 L268.6 121.5 L268.3 119.5 L269.6 118.5 L269.2 118.0 L269.5 117.6 L270.0 117.2 L270.9 116.9 L269.3 112.9 L266.3 109.4 L261.5 106.2 L261.0 106.0 L254.1 104.1 L248.5 98.8"/>
+<circle cx="247.4" cy="98.5" r="9" fill="#F1EADB" stroke="#1B1A17" stroke-width="4"/><text x="263.4" y="104.5" font-family="Arial Narrow,Arial,sans-serif" font-weight="800" font-size="18" fill="#1B1A17">START / ZIEL</text></svg></div>
+<div><h2>Die Strecke</h2>
+<p class="intro">Ein Rundkurs, den du nach ein paar Stunden im Schlaf kennst. Lade die GPX-Datei für deine Uhr oder App herunter.</p>
+<p><strong>6,08 km</strong> pro Runde &nbsp;·&nbsp; <strong>+15 m</strong> Anstieg</p>
+<p class="dl"><a class="btn" href="route.gpx" download>GPX-Datei herunterladen</a></p>
+<p class="small">Funktioniert mit Garmin, Komoot, Strava und jeder GPX-fähigen Uhr oder App.</p></div>
+</div></section>
+
+<section id="basecamp"><div class="wrap">
+<h2>Das Base Camp</h2>
+<p class="intro">Hier verbringst du die Pausen zwischen den Runden. Alles liegt direkt am Start/Ziel.</p>
+<figure class="camp"><img src="camp-grafik.jpg" alt="Übersicht des Base Camps mit Start/Ziel, Verpflegung, Toiletten, Orgavan, Orgazelt, Medaillenwand und Athlete Zone" loading="lazy" width="1536" height="1024"><figcaption>Base Camp: Verpflegung, Toiletten, Orgavan, Orgazelt, Medaillenwand, Athlete Zone und Besucherzone.</figcaption></figure>
+</div></section>
+
+<section id="rueckblick"><div class="wrap">
+<h2>Rückblick 2026</h2>
+<p class="intro">Die erste Ausgabe in Düsseldorf: Das sind die Gesichter und Momente vom Last Man Standing Run 2026.</p>
+<div class="duo">
+<figure><img src="images/sieger-mann.jpg" alt="Der Last Man Standing 2026 nimmt lächelnd seine Medaille und Urkunde entgegen" width="933" height="1400" loading="lazy"><figcaption>Last Man Standing 2026</figcaption></figure>
+<figure><img src="images/sieger-frau.jpg" alt="Die Last Woman Standing 2026 im Gespräch im Base Camp" width="933" height="1400" loading="lazy"><figcaption>Last Woman Standing 2026</figcaption></figure>
+</div>
+<h3 class="sub">Eindrücke</h3>
+<div class="gal">
+<img src="images/eindruck-1.jpg" alt="Läuferinnen und Läufer mit Stirnlampen bei Nacht auf der Strecke" width="933" height="1400" loading="lazy">
+<img src="images/eindruck-3.jpg" alt="Mutter und Kind mit selbst gemaltem Schild „Lauf Papa lauf!“ im Base Camp" width="1400" height="933" loading="lazy">
+<img src="images/eindruck-2.jpg" alt="Läufergruppe mit Startnummern auf dem Rundkurs im Park" width="933" height="1400" loading="lazy">
+<img src="images/eindruck-6.jpg" alt="Zwei Läufer in Bewegungsunschärfe, Schwarz-Weiß" width="933" height="1400" loading="lazy">
+<img src="images/eindruck-4.jpg" alt="Zuschauende jubeln einem Läufer am Start/Ziel zwischen den Event-Flaggen zu, Schwarz-Weiß" width="1400" height="933" loading="lazy">
+<img src="images/eindruck-5.jpg" alt="Läufer im Kostüm mit Reflexjacke bei Nacht, macht das Peace-Zeichen" width="933" height="1400" loading="lazy">
+<img src="images/eindruck-7.jpg" alt="Läufer mit Trinkweste blickt nach einer Runde zur Seite, Schwarz-Weiß" width="933" height="1400" loading="lazy">
+</div>
+</div></section>
+
+<section id="veranstalter"><div class="wrap grid2 orga">
+<figure><img src="images/veranstalter.jpg" alt="Die Veranstalter am Base Camp, Schwarz-Weiß" width="933" height="1400" loading="lazy"></figure>
+<div><h2>Die Veranstalter</h2>
+<p class="intro">Alexander Konrad und Leon Vettermann organisieren den Last Man Standing Run.</p>
+<p><a href="mailto:lastmanstandingrun@gmail.com">lastmanstandingrun@gmail.com</a></p></div>
+</div></section>
+
+<section id="infos"><div class="wrap">
+<h2>Infos &amp; Anmeldung</h2>
+<dl class="facts">
+<div><dt>Wann</dt><dd>11.09.2027</dd></div>
+<div><dt>Check-In</dt><dd>07:30 Uhr</dd></div>
+<div><dt>Start Rennen</dt><dd>10:00 Uhr</dd></div>
+<div><dt>Anmeldung</dt><dd><a class="btn ticket" id="ticket" href="#infos" aria-disabled="true">Ticket-Link folgt</a></dd></div>
+<div><dt>Kontakt</dt><dd><a href="mailto:lastmanstandingrun@gmail.com">lastmanstandingrun@gmail.com</a></dd></div>
+<div><dt>Instagram</dt><dd><a href="https://www.instagram.com/lastmanstandingrun" rel="noopener">@lastmanstandingrun</a></dd></div>
+</dl>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2027 Last Man Standing Run</span><span><a href="mailto:lastmanstandingrun@gmail.com">Kontakt</a> &nbsp; <a href="impressum.html">Impressum</a> &nbsp; <a href="datenschutz.html">Datenschutz</a></span></div></footer>
+
+<script>
+/* Ticket-Link eintragen, sobald er vorliegt: */
+var TICKET_URL="";
+if(TICKET_URL){document.querySelectorAll(".ticket").forEach(function(a){a.href=TICKET_URL;a.textContent="Jetzt anmelden";a.removeAttribute("aria-disabled");a.target="_blank";a.rel="noopener"})}
+var T=new Date("2027-09-11T10:00:00+02:00").getTime();
+function p(n){return String(n).padStart(2,"0")}
+function tick(){var x=Math.max(0,T-Date.now()),s=Math.floor(x/1000);
+d.textContent=Math.floor(s/86400);h.textContent=p(Math.floor(s%86400/3600));m.textContent=p(Math.floor(s%3600/60));document.getElementById("s").textContent=p(s%60)}
+tick();setInterval(tick,1000);
+var bg=document.querySelector(".bg"),still=matchMedia("(prefers-reduced-motion: reduce)").matches,tk=false;
+function pl(){tk=false;var y=window.scrollY,v=window.innerHeight;
+bg.style.transform="translate3d(0,"+(-Math.min(y*.04,v*.04))+"px,0) scale("+(1+Math.min(y/(v*4),.05))+")";
+bg.style.opacity=Math.max(.3,1-y/(v*1.1))}
+if(still){bg.style.opacity=.45}else{addEventListener("scroll",function(){if(!tk){tk=true;requestAnimationFrame(pl)}},{passive:true});pl()}
+
+</script>
+</body>
+</html>
