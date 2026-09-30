@@ -9,7 +9,7 @@
 <meta property="og:description" content="Eine Runde. Jede volle Stunde. Bis nur noch eine Person übrig ist. Düsseldorf. [Date TBA Soon]">
 <meta property="og:image" content="camp-grafik.jpg">
 <meta name="theme-color" content="#0c0e08">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <style>
 :root{--creme:#0c0e08;--paper:rgba(14,17,9,.84);--ink:#ECE6D3;--olive:#9BB04A;--olive-d:#6E8030;--line:#343d1d;--muted:#ADAB93;--bd:#4E5B2A;--display:"Bahnschrift","Arial Narrow","Roboto Condensed",Impact,sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 *{box-sizing:border-box;min-width:0}html{scroll-behavior:smooth;overflow-x:hidden}
@@ -91,8 +91,8 @@ h1{text-shadow:0 2px 28px rgba(0,0,0,.7)}
 
 .ticker{margin-top:34px;overflow:hidden;border-top:2px solid var(--bd);border-bottom:2px solid var(--bd);background:rgba(12,14,8,.55);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
 .ticker-track{display:flex;width:max-content;white-space:nowrap;gap:28px;padding:12px 0;animation:ticker 22s linear infinite}
-.ticker-track span{font:800 15px/1 var(--display);letter-spacing:.06em;color:var(--olive);text-transform:uppercase}
-.ticker-track .dot{color:var(--muted);font-size:10px}
+.ticker-track span{font:800 15px/1 var(--display);letter-spacing:.06em;color:#FF1040;text-transform:uppercase;text-shadow:0 0 6px rgba(255,16,64,.85),0 0 16px rgba(255,16,64,.5)}
+.ticker-track .dot{color:#FF1040;font-size:10px;text-shadow:0 0 6px rgba(255,16,64,.85)}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto};.ticker-track{animation:none!important}}
@@ -201,16 +201,19 @@ if(still){bg.style.opacity=.45}else{addEventListener("scroll",function(){if(!tk)
 
 
 var routeCoords=[[51.19606, 6.80316], [51.19604, 6.80325], [51.19612, 6.80321], [51.19621, 6.80318], [51.19641, 6.80323], [51.19647, 6.80326], [51.19654, 6.80336], [51.19675, 6.8036], [51.19713, 6.80389], [51.19721, 6.80392], [51.19742, 6.80392], [51.19754, 6.80385], [51.19773, 6.80368], [51.19775, 6.80366], [51.19794, 6.80346], [51.19802, 6.80337], [51.19818, 6.80321], [51.19825, 6.80319], [51.1983, 6.80326], [51.19833, 6.80336], [51.19835, 6.80347], [51.19843, 6.80393], [51.19849, 6.80424], [51.19857, 6.80458], [51.19873, 6.80514], [51.19876, 6.80523], [51.1988, 6.80535], [51.19893, 6.80558], [51.1991, 6.80588], [51.19933, 6.80623], [51.1993, 6.80631], [51.1992, 6.80652], [51.19919, 6.80668], [51.19917, 6.807], [51.19917, 6.80735], [51.19916, 6.80759], [51.19904, 6.80758], [51.19879, 6.80757], [51.19879, 6.80762], [51.1987, 6.80769], [51.19868, 6.80843], [51.19867, 6.80855], [51.19859, 6.80869], [51.19852, 6.80872], [51.19843, 6.80879], [51.19831, 6.80899], [51.19801, 6.80927], [51.19791, 6.80941], [51.19788, 6.8095], [51.19784, 6.80958], [51.1978, 6.80969], [51.1977, 6.81015], [51.19765, 6.8102], [51.19756, 6.81025], [51.19753, 6.81026], [51.19747, 6.81029], [51.19745, 6.81019], [51.19741, 6.81021], [51.19735, 6.80991], [51.19721, 6.80992], [51.19678, 6.80993], [51.19678, 6.80982], [51.19641, 6.80983], [51.19641, 6.80979], [51.19641, 6.80969], [51.19634, 6.80969], [51.19586, 6.80969], [51.19575, 6.80969], [51.19575, 6.80966], [51.19566, 6.80966], [51.19562, 6.80962], [51.1956, 6.80959], [51.19555, 6.80952], [51.19535, 6.80953], [51.19529, 6.80954], [51.19511, 6.80967], [51.19501, 6.80975], [51.19483, 6.80978], [51.19453, 6.80969], [51.194, 6.8097], [51.19407, 6.80929], [51.19407, 6.80894], [51.194, 6.80822], [51.194, 6.8081], [51.194, 6.80787], [51.1941, 6.80731], [51.19432, 6.80672], [51.19438, 6.8065], [51.19448, 6.80595], [51.19461, 6.80559], [51.19476, 6.80536], [51.19488, 6.80517], [51.19485, 6.80504], [51.19468, 6.80481], [51.19415, 6.80447], [51.19402, 6.80451], [51.19396, 6.80452], [51.19391, 6.80446], [51.1938, 6.80439], [51.19335, 6.80442], [51.19322, 6.80452], [51.19318, 6.80522], [51.19316, 6.80561], [51.19316, 6.80572], [51.19317, 6.8061], [51.19315, 6.80642], [51.19293, 6.80722], [51.19287, 6.80785], [51.19277, 6.80826], [51.19264, 6.80879], [51.19253, 6.80938], [51.19237, 6.81053], [51.19232, 6.81088], [51.1923, 6.8114], [51.19226, 6.8123], [51.19229, 6.81268], [51.1923, 6.81294], [51.19222, 6.81294], [51.19089, 6.8129], [51.19068, 6.81287], [51.1905, 6.81272], [51.19036, 6.81252], [51.19033, 6.81237], [51.19031, 6.81239], [51.19029, 6.81241], [51.19012, 6.81255], [51.19007, 6.8126], [51.19, 6.81252], [51.19002, 6.81237], [51.18996, 6.81196], [51.18981, 6.81036], [51.18978, 6.81003], [51.18965, 6.80944], [51.18959, 6.80907], [51.18957, 6.80854], [51.18971, 6.80672], [51.18969, 6.80635], [51.1896, 6.80615], [51.1895, 6.80604], [51.1894, 6.80599], [51.18873, 6.80583], [51.18861, 6.80581], [51.18725, 6.80546], [51.18646, 6.80526], [51.18629, 6.80523], [51.18617, 6.8052], [51.18563, 6.80502], [51.18519, 6.80488], [51.18494, 6.8048], [51.18462, 6.80475], [51.18327, 6.80426], [51.18293, 6.80425], [51.18265, 6.80432], [51.18239, 6.80442], [51.18221, 6.80449], [51.1822, 6.80445], [51.18212, 6.80374], [51.18212, 6.80369], [51.18249, 6.80365], [51.18266, 6.80363], [51.18304, 6.80359], [51.18325, 6.80362], [51.18461, 6.80404], [51.18604, 6.80448], [51.1866, 6.80465], [51.1869, 6.80474], [51.18749, 6.8049], [51.1878, 6.80498], [51.18791, 6.80494], [51.18841, 6.80491], [51.18861, 6.80489], [51.18877, 6.80505], [51.1893, 6.80518], [51.18964, 6.80527], [51.18989, 6.80364], [51.19013, 6.80283], [51.19016, 6.80277], [51.19114, 6.80179], [51.19125, 6.80169], [51.19152, 6.80147], [51.19163, 6.80141], [51.19168, 6.80189], [51.19167, 6.802], [51.19158, 6.80221], [51.19159, 6.80232], [51.19164, 6.8024], [51.19185, 6.80271], [51.19197, 6.80276], [51.19221, 6.80277], [51.19224, 6.8028], [51.19233, 6.80289], [51.19239, 6.80292], [51.19243, 6.80297], [51.19253, 6.80334], [51.19264, 6.80349], [51.19282, 6.80373], [51.19292, 6.80397], [51.19296, 6.80413], [51.1931, 6.80423], [51.19322, 6.80431], [51.19335, 6.80442], [51.1938, 6.80439], [51.19391, 6.80446], [51.19396, 6.80452], [51.19402, 6.80451], [51.19415, 6.80447], [51.19468, 6.80481], [51.19476, 6.80482], [51.19489, 6.80485], [51.19496, 6.80478], [51.19506, 6.80476], [51.1951, 6.80485], [51.19513, 6.80482], [51.19515, 6.80485], [51.19517, 6.80489], [51.19518, 6.80495], [51.19537, 6.80483], [51.19554, 6.80461], [51.19569, 6.80424], [51.1957, 6.8042], [51.19579, 6.80367], [51.19604, 6.80325]];
-addEventListener("load",function(){
-if(window.L && document.getElementById("routemap")){
-  var rmap=L.map("routemap",{scrollWheelZoom:false,attributionControl:true});
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"&copy; OpenStreetMap-Mitwirkende"}).addTo(rmap);
-  var line=L.polyline(routeCoords,{color:"#9BB04A",weight:5,lineJoin:"round",lineCap:"round"}).addTo(rmap);
-  rmap.fitBounds(line.getBounds(),{padding:[24,24]});
-  L.circleMarker(routeCoords[0],{radius:8,color:"#0c0e08",weight:3,fillColor:"#ECE6D3",fillOpacity:1}).addTo(rmap).bindTooltip("Start / Ziel",{permanent:false,direction:"top"});
+function initRouteMap(){
+var el=document.getElementById("routemap");
+if(!el)return;
+if(!window.L){el.innerHTML='<p style="padding:20px;color:#ADAB93;font-size:15px">Karte konnte nicht geladen werden (kein Internetzugriff auf OpenStreetMap). Nutze den GPX-Download oben.</p>';return}
+var rmap=L.map(el,{scrollWheelZoom:false,attributionControl:true});
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:"&copy; OpenStreetMap-Mitwirkende"}).addTo(rmap);
+var line=L.polyline(routeCoords,{color:"#9BB04A",weight:5,lineJoin:"round",lineCap:"round"}).addTo(rmap);
+rmap.fitBounds(line.getBounds(),{padding:[24,24]});
+L.circleMarker(routeCoords[0],{radius:8,color:"#0c0e08",weight:3,fillColor:"#ECE6D3",fillOpacity:1}).addTo(rmap).bindTooltip("Start / Ziel",{permanent:false,direction:"top"});
+setTimeout(function(){rmap.invalidateSize()},200);
 }
-});
+if(document.readyState==="complete"){initRouteMap()}else{addEventListener("load",initRouteMap)}
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 </body>
 </html>
