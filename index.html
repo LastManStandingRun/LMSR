@@ -60,6 +60,8 @@ dl.facts{margin:0;border:2px solid var(--bd);background:var(--paper)}
 dl.facts div{display:grid;grid-template-columns:170px 1fr;border-bottom:1px solid var(--line)}dl.facts div:last-child{border:0}
 dl.facts dt{padding:18px 22px;font:800 20px/1.3 var(--display);background:var(--creme);border-right:1px solid var(--line)}
 dl.facts dd{margin:0;padding:18px 22px;font-size:19px}
+dl.facts.wide-dt div{grid-template-columns:250px 1fr}
+@media(max-width:480px){dl.facts.wide-dt div{grid-template-columns:1fr}}
 footer{padding:44px 0;font-size:15px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between}
 footer a{text-decoration:none;border-bottom:1px solid currentColor}
@@ -102,7 +104,7 @@ h1{text-shadow:0 2px 28px rgba(0,0,0,.7)}
 <div class="bg" aria-hidden="true"></div>
 <header class="nav"><div class="wrap">
 <a class="brand" href="#top">LAST MAN STANDING RUN</a>
-<nav aria-label="Hauptnavigation"><ul><li><a href="#format">Format</a></li><li><a href="#strecke">Strecke</a></li><li><a href="#basecamp">Base Camp</a></li><li><a href="#rueckblick">Rückblick</a></li><li><a href="#infos">Infos</a></li></ul></nav>
+<nav aria-label="Hauptnavigation"><ul><li><a href="#format">Format</a></li><li><a href="#strecke">Strecke</a></li><li><a href="#basecamp">Base Camp</a></li><li><a href="#rueckblick">Rückblick</a></li><li><a href="#chronik">Chronik</a></li><li><a href="#infos">Infos</a></li></ul></nav>
 <a class="btn ticket" href="#infos" aria-disabled="true">Ticket folgt</a>
 </div></header>
 
@@ -150,7 +152,7 @@ h1{text-shadow:0 2px 28px rgba(0,0,0,.7)}
 
 <section id="rueckblick"><div class="wrap">
 <h2>Rückblick 2026</h2>
-<p class="intro">Die dritte Ausgabe in Düsseldorf: Das sind die Gesichter und Momente vom Last Man Standing Run 2026.</p>
+<p class="intro">Die erste Ausgabe in Düsseldorf: Das sind die Gesichter und Momente vom Last Man Standing Run 2026.</p>
 <div class="duo">
 <figure><img src="images/sieger-mann.jpg" alt="Der Last Man Standing 2026 nimmt lächelnd seine Medaille und Urkunde entgegen" width="933" height="1400" loading="lazy"><figcaption>Last Man Standing 2026</figcaption></figure>
 <figure><img src="images/sieger-frau.jpg" alt="Die Last Woman Standing 2026 im Gespräch im Base Camp" width="933" height="1400" loading="lazy"><figcaption>Last Woman Standing 2026</figcaption></figure>
@@ -161,10 +163,24 @@ h1{text-shadow:0 2px 28px rgba(0,0,0,.7)}
 <img src="images/eindruck-2.jpg" alt="Läufergruppe mit Startnummern auf dem Rundkurs im Park" width="933" height="1400" loading="lazy">
 <img src="images/eindruck-5.jpg" alt="Läufer im Kostüm mit Reflexjacke bei Nacht, macht das Peace-Zeichen" width="933" height="1400" loading="lazy">
 <img src="images/eindruck-6.jpg" alt="Zwei Läufer in Bewegungsunschärfe, Schwarz-Weiß" width="933" height="1400" loading="lazy">
-<img class="wide" src="images/eindruck-3.jpg" alt="Mutter und Kind mit selbst gemaltem Schild „Lauf Papa lauf!“ im Base Camp" width="1400" height="933" loading="lazy">
+<img class="wide" src="images/eindruck-3.jpg" alt="Gruppenfoto aller Teilnehmenden des Last Man Standing Run mit Startnummern" width="1400" height="933" loading="lazy">
 <img src="images/eindruck-7.jpg" alt="Läufer mit Trinkweste blickt nach einer Runde zur Seite, Schwarz-Weiß" width="933" height="1400" loading="lazy">
 <img src="images/eindruck-4.jpg" alt="Zuschauende jubeln einem Läufer am Start/Ziel zwischen den Event-Flaggen zu, Schwarz-Weiß" width="1400" height="933" loading="lazy">
 </div>
+</div></section>
+
+<section id="chronik"><div class="wrap">
+<h2>Last Man Standing</h2>
+<dl class="facts">
+<div><dt>2024</dt><dd>Alessandra Crognale — 18 Loops</dd></div>
+<div><dt>2025</dt><dd>Christian Jakl — 22 Loops</dd></div>
+<div><dt>2026</dt><dd>Nicko Statsenko — 30 Loops</dd></div>
+</dl>
+<h3 class="sub">Rekordhalter</h3>
+<dl class="facts wide-dt">
+<div><dt>Overall Course Record</dt><dd>Nicko Statsenko — 30 Loops, 2026</dd></div>
+<div><dt>Woman Course Record</dt><dd>Alessandra Crognale — 18 Loops</dd></div>
+</dl>
 </div></section>
 
 <section id="veranstalter"><div class="wrap grid2 orga">
