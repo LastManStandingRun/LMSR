@@ -50,9 +50,12 @@
     var lap = $('#b-lap'), inn = $('#b-in'), km = $('#b-km'), bar = $('#b-bar');
     var pad = function (n, l) { n = String(n); while (n.length < l) n = '0' + n; return n; };
     var set = function (t) {
-      // Das Feld bricht anfangs schnell, später langsam ein.
-      var e = 1 - Math.pow(1 - t, 2);
-      var l = Math.round(30 * t), p = Math.max(1, Math.round(45 - 44 * e));
+      // Die ersten Starter*innen scheiden erst nach Runde 5 aus, danach bricht das Feld schnell ein.
+      var l = Math.round(30 * t);
+      // Bis Runde 29 bleiben mindestens 2 im Rennen, erst in Runde 30 bleibt eine Person übrig.
+      var u = Math.max(0, Math.min(1, (l - 5) / 24));
+      var e = 1 - Math.pow(1 - u, 2);
+      var p = l >= 30 ? 1 : Math.max(2, Math.round(45 - 43 * e));
       lap.textContent = pad(l, 2); inn.textContent = pad(p, 2); km.textContent = pad(l * 6, 3);
       bar.style.transform = 'scaleX(' + (p / 45) + ')';
     };
@@ -62,7 +65,7 @@
       var bo = new IntersectionObserver(function (en) {
         if (!en[0].isIntersecting) return;
         bo.disconnect();
-        var start = null, dur = 5200;
+        var start = null, dur = 7000;
         (function step(ts) {
           if (start === null) start = ts;
           var t = Math.min(1, (ts - start) / dur);
