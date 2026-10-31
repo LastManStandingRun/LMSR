@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#000000">
 <meta property="og:title" content="Last Man Standing Run Düsseldorf">
-<meta property="og:description" content="Jede Stunde eine 6-km-Runde. Einer bleibt stehen. Backyard Ultra im Düsseldorfer Südpark, 4. Ausgabe 2027.">
+<meta property="og:description" content="Jede Stunde eine 6-km-Runde, bis nur noch einer steht. Backyard Ultra im Düsseldorfer Südpark, 4. Ausgabe 2027.">
 <meta property="og:image" content="assets/img/event-page.jpg">
 <link rel="icon" href="assets/img/logo.jpg">
 <link rel="preload" href="assets/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -59,8 +59,8 @@
   <div class="hero-bg"><img src="assets/img/eindruck-4.jpg" alt="" width="1400" height="933" fetchpriority="high"></div>
   <div class="wrap">
     <div class="kicker">4. Ausgabe · 2027 · Südpark Düsseldorf</div>
-    <h1>Einer bleibt stehen.</h1>
-    <p class="lead">Jede Stunde eine Runde. Jede Stunde die gleiche Frage: noch eine? Der Backyard Ultra mitten in Düsseldorf, für Einsteiger*innen und Ultraläufer*innen.</p>
+    <h1>Bis nur noch einer steht.</h1>
+    <p class="lead">Jede Stunde eine Runde und dieselbe Frage, mit der du kämpfst:<br>Gebe ich auf oder gehe ich noch eine Runde weiter?<br>Willkommen beim familiären Backyard Ultra im Herzen von Düsseldorf, für Einsteiger*innen und erfahrene Ultraläufer*innen.</p>
     <div class="btn-row">
       <a class="btn" href="#tickets" aria-disabled="true" tabindex="-1">Tickets bald verfügbar</a>
       <a class="btn ghost" href="#format">So funktioniert’s</a>
@@ -104,21 +104,40 @@
         <li><div><h3>Start zur vollen Stunde</h3><p>Um 10:00 Uhr geht die erste Runde los, danach jede Stunde. Check-in ist ab 07:30 Uhr.</p></div></li>
         <li><div><h3>Zurück in unter 60 Minuten</h3><p>Du musst die Runde schaffen und zur vollen Stunde wieder an der Startlinie stehen.</p></div></li>
         <li><div><h3>Weiter, bis nur einer übrig ist</h3><p>Du scheidest aus, wenn du eine Runde nicht rechtzeitig beendest, nicht pünktlich wieder startest oder freiwillig aufhörst.</p></div></li>
+        <li><div><h3>Loop of Glory</h3><p>Sind nach Runde 59 noch mehrere im Rennen, entscheidet Runde 60. Wer sie am schnellsten beendet, ist der Last Man Standing 2027, oder die Last Woman.</p></div></li>
       </ol>
       <div class="reveal">
-        <div class="board" id="board" aria-label="Beispielanzeige: So schrumpft das Starterfeld Runde für Runde">
-          <div class="board-top"><span class="label">So schrumpft das Feld</span></div>
-          <div class="board-row">
-            <div class="board-cell"><span class="label">Runde</span><div class="seg" id="b-lap">00</div></div>
-            <div class="board-cell"><span class="label">Noch im Rennen</span><div class="seg green" id="b-in">45</div></div>
-            <div class="board-cell"><span class="label">Kilometer</span><div class="seg" id="b-km">000</div></div>
+        <div class="board" id="board" role="img" aria-label="Animation: 45 Punkte laufen im Kreis über die Strecke und scheiden Runde für Runde aus, bis nur noch einer übrig ist">
+          <div class="board-top"><span class="label">So schrumpft das Feld</span><span class="label" id="b-state">Start</span></div>
+          <div class="sim">
+            <svg class="sim-svg" viewBox="0 0 300 180" aria-hidden="true">
+              <path class="lane" d="M150,170 H200 A80 80 0 0 0 200,10 H100 A80 80 0 0 0 100,170 Z"/>
+              <path class="lane" d="M150,156 H200 A66 66 0 0 0 200,24 H100 A66 66 0 0 0 100,156 Z"/>
+              <path id="simPath" fill="none" d="M150,163 H200 A73 73 0 0 0 200,17 H100 A73 73 0 0 0 100,163 Z"/>
+              <line x1="150" y1="155" x2="150" y2="178" stroke="#fff" stroke-width="2"/>
+              <defs>
+                <radialGradient id="gold" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fff0a8"/><stop offset=".45" stop-color="#e5b32a"/><stop offset="1" stop-color="#8f6410"/></radialGradient>
+              </defs>
+              <g id="clock">
+              <circle cx="150" cy="90" r="38" class="clock-bg"/>
+              <circle cx="150" cy="90" r="38" class="clock-arc" id="clockArc" transform="rotate(-90 150 90)"/>
+              <text x="150" y="75" text-anchor="middle" class="clock-label">Minuten</text>
+              <text x="150" y="103" text-anchor="middle" class="clock-time" id="clockTime">60:00</text>
+              </g>
+              <g id="simDots"></g>
+              <g id="medal">
+                <text x="150" y="132" text-anchor="middle" class="medal-text">Last Man Standing</text>
+                <polygon points="140,139 150,158 160,139 154,139 150,147 146,139" class="medal-ribbon"/>
+                <circle cx="150" cy="163" r="13" fill="url(#gold)" stroke="#fff3b0" stroke-width="1.2"/>
+                <circle cx="150" cy="163" r="9" fill="none" stroke="#8f6410" stroke-width=".9"/>
+                <text x="150" y="168" text-anchor="middle" class="medal-num">1</text>
+              </g>
+            </svg>
+          </div>
+          <div class="sim-read">
+            <div class="board-cell"><span class="label">Noch im Rennen</span><div class="seg green" id="b-in">20</div></div>
           </div>
           <div class="board-bar"><i id="b-bar"></i></div>
-          <p class="small-note">45 Starter*innen 2026, am Ende stand Nicko Statsenko nach 30 Runden und 180 km.</p>
-        </div>
-        <div class="glory">
-          <h3>Loop of Glory</h3>
-          <p>Sind nach Runde 59 noch mehrere im Rennen, entscheidet Runde 60. Wer sie am schnellsten beendet, ist der Last Man Standing 2027, oder die Last Woman.</p>
         </div>
       </div>
     </div>
