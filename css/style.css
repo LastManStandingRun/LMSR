@@ -50,7 +50,7 @@ p{color:var(--muted)}
 .nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand img{width:44px;height:44px;border-radius:50%}
-.brand span{font:400 20px/1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.brand span{font:400 20px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
 .nav ul{display:flex;gap:30px}
 .nav ul a{font:700 12px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;text-decoration:none;padding:8px 0;border-bottom:1px solid transparent;transition:border-color .2s}
 .nav ul a:hover{border-color:var(--accent)}
@@ -196,6 +196,15 @@ table.results tr.top td:first-child{box-shadow:inset 3px 0 0 var(--accent);color
 .press{margin-top:var(--head-gap);display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .press a{padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;display:block;transition:background .2s}
 .press a:hover{background:var(--card-alt)}
+.press-img{padding:0!important;display:flex!important;flex-direction:column}
+.press-img .thumb{display:block;aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid var(--line)}
+.press-img .thumb img{width:106.98%;max-width:none;margin:-1.63% 0 0 -3.49%;transition:transform .5s}
+.press-img:hover .thumb img{transform:scale(1.04)}
+.press-rp .thumb img{width:107.66%;margin:-37.97% 0 0 -2.19%}
+.press-rp2 .thumb img{width:100%;height:100%;object-fit:cover;margin:0}
+.press-img .logo{display:inline-flex;align-self:flex-start;background:#fff;padding:8px 12px;margin:20px 26px 14px}
+.press-img .logo img{height:22px;width:auto}
+.press-img .t{padding:0 26px 26px}
 .press .label{color:var(--accent);display:block;margin-bottom:10px}
 .press span.t{font:400 22px/1.15 var(--display);text-transform:uppercase;display:block;color:#fff}
 
@@ -241,8 +250,8 @@ table.results tr.top td:first-child{box-shadow:inset 3px 0 0 var(--accent);color
 
 /* Zuschauer / Sponsoren */
 .notice{border:1px dashed var(--line);padding:30px;color:var(--muted);max-width:640px}
-.sponsor-row{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);margin-bottom:34px}
-.sponsor{width:min(100%,300px);aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;padding:12px}
+.sponsor-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.sponsor{width:min(100%,300px);aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);background:#fff;padding:12px}
 .sponsor img{max-height:100%;object-fit:contain}
 .sponsor.empty{background:var(--card);color:var(--faint);font:600 12px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;text-align:center}
 
@@ -287,6 +296,11 @@ footer a:hover{color:#fff}
 .reveal.in{opacity:1;transform:none}
 
 /* Responsiv */
+@media(max-width:1180px){
+  .nav ul{gap:18px}
+  .nav ul a{letter-spacing:.14em}
+  .brand span{font-size:17px}
+}
 @media(max-width:1080px){
   .perk-grid{grid-template-columns:repeat(2,1fr)}
   .foot-grid{grid-template-columns:1fr 1fr}
